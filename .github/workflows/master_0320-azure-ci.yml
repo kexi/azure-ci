@@ -25,7 +25,11 @@ jobs:
         uses: actions/cache@v2.1.7
         with:
           path: c:/home/site/wwwroot/.vscode-test
-          key: vscode_test
+          key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-build-${{ env.cache-name }}-
+            ${{ runner.os }}-build-
+            ${{ runner.os }}-
 
       - name: npm install, build, and test
         run: |
