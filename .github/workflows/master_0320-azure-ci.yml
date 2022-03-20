@@ -24,7 +24,9 @@ jobs:
       - name: Cache
         uses: actions/cache@v2.1.7
         with:
-          path: c:/home/site/wwwroot/.vscode-test
+          path: |
+            C:\home\site\wwwroot\.vscode-test
+            D:\a\azure-ci\azure-ci\.vscode-test\
           key: ${{ runner.os }}-build-${{ env.cache-name }}-${{ hashFiles('**/package-lock.json') }}
           restore-keys: |
             ${{ runner.os }}-build-${{ env.cache-name }}-
