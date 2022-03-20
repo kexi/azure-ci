@@ -1,3 +1,5 @@
+格闘中
+
 # azure-ci README
 
 This is the README for your extension "azure-ci". After writing up a brief description, we recommend including the following sections.
