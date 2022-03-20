@@ -38,7 +38,7 @@ jobs:
         run: |
           npm install
           npx webpack
-          npm run test --if-present
+          # npm run test --if-present
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
