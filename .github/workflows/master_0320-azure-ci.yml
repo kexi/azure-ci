@@ -37,7 +37,9 @@ jobs:
           path: .
 
   deploy:
-    runs-on: windows-2022
+    runs-on: 
+      - windows-2022
+      - windows-2019
     needs: build
     environment:
       name: 'Production'
