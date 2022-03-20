@@ -1,5 +1,6 @@
 [![Build and deploy Node.js app to Azure Web App - 0320-azure-ci 2](https://github.com/kexi/azure-ci/actions/workflows/master_0320-azure-ci.yml/badge.svg)](https://github.com/kexi/azure-ci/actions/workflows/master_0320-azure-ci.yml)
 
+ここは、検証用リポジトリです。
 
 # azure-ci README
 
