@@ -24,11 +24,7 @@ jobs:
 
       
 
-      - name: npm install, build, and test
-        run: |
-          npm install
-          npx webpack
-          # npm run test --if-present
+ 
       
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v2
@@ -39,7 +35,7 @@ jobs:
   deploy:
     runs-on: 
       - windows-2022
-      
+
     needs: build
     environment:
       name: 'Production'
@@ -65,7 +61,9 @@ jobs:
       
       - name: npm install, build, and test
         run: |
-          npm run test --if-present
+          npm install
+          npx webpack
+          npm run test
 
       - name: 'Deploy to Azure Web App'
         uses: azure/webapps-deploy@v2
