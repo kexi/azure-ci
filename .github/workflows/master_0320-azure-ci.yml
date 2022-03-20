@@ -21,6 +21,12 @@ jobs:
         with:
           node-version: '16.x'
 
+      - name: Cache
+        uses: actions/cache@v2.1.7
+        with:
+          path: c:/home/site/wwwroot/.vscode-test
+          key: vscode_test
+          
       - name: npm install, build, and test
         run: |
           npm install
